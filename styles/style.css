@@ -1,0 +1,78 @@
+
+
+
+/*--------------------Navigation & Search Bar------------------*/ 
+
+.etsy-logo{
+	width: 8%;
+    margin-left: 5%;
+    border-radius: :5%;
+}
+input{
+    margin-left: 10%;
+    height: 40px;
+    width: 30%;
+    position:absolute;
+    margin-top: 3%;
+    font-size:20px;
+    text-align:center;
+}
+.nav-icon-container{
+	display:inline-block;
+	margin-left:60%;
+	position:absolute;
+	margin-top: 3%;
+/*	border-left:1px solid;
+	border-right:1px solid;*/
+}
+
+.button{
+	/*border-right:1px solid;*/
+/*	float:left;*/
+	background-color:white;
+	text-decoration:none;
+}
+
+/*--------------------Category Buttons------------------*/ 
+
+.category-button-container{
+	border-top:1px solid;
+	border-bottom: 1px solid;
+}
+
+#clothing-margin{
+	margin-left:10%;
+
+}
+
+/*--------------------LISTING STYLES------------------*/ 
+
+.listing-pic{
+	width:100%;
+}
+
+.single-listing{
+	border:1px solid;
+	display:inline-block;
+	width:30%;
+	margin:5px;
+}
+
+.list-title{
+	width:69%;
+	margin: auto;
+    transform: translateX(-50px);
+    text-overflow:ellipsis;
+    white-space: nowrap;
+    overflow:hidden;
+}
+
+.list-price{
+	display:inline-block;
+	color:green;
+}
+
+.listing-title h2{
+	/*transform: translateX(-50px);*/
+	text-align: center;
+}
