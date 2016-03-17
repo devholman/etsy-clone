@@ -4,6 +4,8 @@
 	<link rel="stylesheet" type="text/css" href="https://raw.githubusercontent.com/necolas/normalize.css/master/normalize.css">
 	<link rel="stylesheet" type="text/css" href="styles/style.css">
 	<link rel="stylesheet" href="./styles/font-awesome-4.5.0 2/css/font-awesome.min.css">
+	<link href='https://fonts.googleapis.com/css?family=Oswald|Montserrat|Ubuntu|Roboto+Slab|Arimo|Candal|Oxygen|Nunito' rel='stylesheet' type='text/css'>
+<!-- 	<link rel="stylesheet" type="text/css" href="magnifier.css"> -->
 
 	<title></title>
 </head>
@@ -11,8 +13,10 @@
 
 <div class="homepage-container">
 	<div class="header-container">
-		<img class="etsy-logo" src="./images/etsy.png">
-		<input type="searchbox" placeholder="Search for items or shops"></input>
+		
+			<a href="#"><img class="etsy-logo" src="./images/etsy.png"></a>
+
+
 		<div class="nav-icon-container">
 				<button class="button">
 					<i class="fa fa-home fa-3x"></i>
@@ -29,18 +33,24 @@
 	</div>
 
 	<div class="category-button-container">
-		<button id="clothing-margin">Clothing & Accessories</button>
-		<button>Jewelry</button>
-		<button>Craft Supplies & Tools</button>
-		<button>Weddings</button>
-		<button>Entertainment</button>
+		<a href="#search/:clothing and accessories"><button id="clothing-margin">Clothing & Accessories</button></a>
+
+		<a href="#search/:jewelry"><button>Jewelry</button></a>
+
+		<a href="#search/:Craft Supplies"><button>Craft Supplies & Tools</button></a>
+
+		<a href="#search/:weddings"><button>Weddings</button></a>
+		<a href="#search/:Entertainment"><button>Entertainment</button></a>
 	</div>
 
 	<div class="listing-container">
 		<div class="listing-title">
-			<h2>Active Listings</h2>
-		</div>
-		<div class="active-items"></div>
+<!-- 			<h2>Active Listings</h2>
+ -->		</div>
+
+	<div class="active-items">
+
+	</div>
 	</div>
 </div>
 
