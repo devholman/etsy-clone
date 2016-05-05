@@ -1,6 +1,8 @@
 
 
-
+body{
+	background-color:whitesmoke;
+}
 /*--------------------Navigation & Search Bar------------------*/ 
 
 .etsy-logo{
@@ -17,6 +19,7 @@
     margin-top: -13%;
     font-size: 20px;
     text-align: center;
+    top:26%;
 }
 
 .nav-icon-container{
@@ -33,6 +36,7 @@
 /*	float:left;*/
 	background-color:white;
 	text-decoration:none;
+
 }
 
 /*--------------------Category Buttons------------------*/ 
@@ -40,7 +44,26 @@
 .category-button-container{
 	border-top:1px solid;
 	border-bottom: 1px solid;
+	background-color:whitesmoke;
+	text-align:center;
+	font-size: 30px;
 }
+
+.cat-btn {
+	background-color: white; /* Green */
+	border: none;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	outline:none;
+	color: teal;
+	border-left: 1px solid teal;
+	border-right: 1px solid teal;
+}
+
+
 
 #clothing-margin{
 	margin-left:10%;
@@ -51,17 +74,22 @@
 
 
 .listing-container{
-	background-image:url(./lightpaperfibers/lightpaperfibers_@2X.png);
+	background-image:url(./cartographer/cartographer.png);
 }
 	.active-items{
 		text-align:center;
 	}
+		.deatail-searchbox {
+			position: absolute;
+			top: 40%;
+			left: 45%;
+		}
 
 	.single-listing{
 		border:2px solid #444;
 		display:inline-block;
-		width:30%;
-		margin:5px;
+    	width: 24%;
+    	margin: 20px;
 		background-color: #F2F1EF;
 		border-radius:5%;
 		text-align:left;
@@ -84,18 +112,22 @@
 			.listing-title h2{
 				/*transform: translateX(-50px);*/
 				text-align: center;
-				color:#444;
-				font-family: 'Montserrat', sans-serif;
+				color: #F2F1EF;
+				font-size:40px;
+				font-family: 'Architects Daughter', cursive;
+				padding:5%;
 			}
 
 		.list-price{
 			display:inline-block;
 			color:green;
-			margin-right:80%;
+			margin: 8px 8px 13px 13px;
 		}
 
 		.single-listing p{
-			margin-left:inherit;
+			margin-left:15px;
+			font-size:20px;
+			display:inline-block;
 		}
 
 
@@ -104,12 +136,13 @@
 
 .detailed-listing{
 	text-align:center;
-	background-image:url(./greyzz/greyzz.png);
+	color:#F2F1EF;
 }
 
 #description{
     width: 70%;
     margin: auto;
+    padding:20px;
     font-family: 'Roboto Slab', serif;
     text-align:left;
     text-indent:50px;
@@ -122,4 +155,6 @@
 
 .detailed-listing h1{
 	font-family: 'Oxygen', sans-serif;
+	padding: 3%;
+	margin: auto 50px;
 }

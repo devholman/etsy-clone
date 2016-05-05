@@ -55,6 +55,7 @@ var EtsyHomeView = Backbone.View.extend({
 
 	_render: function(){
 		console.log(this.model)
+		
 		var htmlstr = '<input id="homeSearchbox" type="searchbox" placeholder="Search for items or shops">'
 		var resultsArr  =  this.model.get('results')
 
@@ -74,7 +75,7 @@ var EtsyHomeView = Backbone.View.extend({
 })
 
 var EtsyDetailView = Backbone.View.extend({
-	el: ".active-items",
+	el: ".active-items", //This is the dom element on the html page
 
 	initialize: function(someModel){
 		this.model = someModel
@@ -84,15 +85,13 @@ var EtsyDetailView = Backbone.View.extend({
 
 	_render: function(){
 		console.log(this.model)
-		var htmlstr = '<input>'
+		var htmlstr = '<input class="detail-searchbox">'
 		var detailsObj = this.model.get('results')[0]
 		var images = detailsObj.Images[0].url_570xN
 
 			htmlstr += '<div class = "detailed-listing">'
 			htmlstr += '<h1>' + detailsObj.title + '</h1>'
-			// htmlstr += '<div class = "magnify"'
 			htmlstr += '<img src="' + images + '">'
-			// htmlstr += '</div>'
 			htmlstr += '<p id="description">' + detailsObj.description + '</p>'
 			htmlstr += '</div>'
 
@@ -102,7 +101,7 @@ var EtsyDetailView = Backbone.View.extend({
 })
 
 var EtsyTitleView = Backbone.View.extend({
-	el: " .listing-title",
+	el: " .listing-title",   //This is the dom element on the html page
 
 	_viewName: null,
 
@@ -111,11 +110,12 @@ var EtsyTitleView = Backbone.View.extend({
 	},
 
 	_render: function(){
-		var htmlstr = '<h2>' + this._viewName + '</h2>'	
+		var htmlstr = '<h2>' + this._viewName + '</h2>'	//renders the title of the selected item
 		this.el.innerHTML = htmlstr
 	}
 		
 })
+
 
 
 // ---------------------- ROUTER --------------------------//
@@ -131,8 +131,9 @@ var EtsyRouter = Backbone.Router.extend({
 	handleHomepage: function(jsonData){
 		var mod     = new EtsyModel()
 		var newView = new EtsyHomeView(mod)
-		var titView = new EtsyTitleView('Active Listing')
+		var titView = new EtsyTitleView('Active Listings')
 		titView._render()
+		
 		mod.fetch({
 			data:{
 				dataType: 'JSONP',
@@ -143,7 +144,7 @@ var EtsyRouter = Backbone.Router.extend({
 	},
 
 	handleDetails: function(id){
-		var detailMod = new EtsyDetailModel ()
+		var detailMod = new EtsyDetailModel()
 		detailMod._generateUrl(id)
 		var newDetailView = new EtsyDetailView(detailMod)
 		var titView = new EtsyTitleView('')
